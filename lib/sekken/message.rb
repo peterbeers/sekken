@@ -35,7 +35,7 @@ class Sekken
 
         tag = [symbol_name]
 
-        if element.form == 'qualified'
+        if element.form == 'qualified' && element.namespace != nil
           nsid = @envelope.register_namespace(element.namespace)
           tag.unshift(nsid)
         end
